@@ -1,20 +1,35 @@
-﻿namespace la_mia_pizzeria_static.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace la_mia_pizzeria_static.Models
 {
+    [Table("pizzas")]
     public class Pizza
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public string Photo { get; private set; }
-        public float Price { get; private set; }
+        [Key]
+        public int Id { get; set; }
 
-        public Pizza(string name, string description, string photo, string price)
+        [Required]
+        [Column("name")]
+        public string Name { get; private set; }
+
+        [Column("ingredients", TypeName = "text")]
+        public string Ingredients { get; private set; }
+
+        [Column("photo")]
+        public string Photo { get; private set; }
+
+        [Required]
+        [Column("price", TypeName ="decimal(5,2)")]
+        public decimal Price { get; private set; }
+
+        public Pizza(string name, string ingredients, string photo, decimal price)
         {
             this.Name = name;
-            this.Description = description;
+            this.Ingredients = ingredients;
             this.Photo = photo;
-            this.Price = float.Parse(price);
+            this.Price = price;
         }
-
 
     }
 }

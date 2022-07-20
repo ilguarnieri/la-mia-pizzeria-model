@@ -29,7 +29,7 @@ body{
 
 .patter-background {
     background-image: url(/img/background_black.jpg);
-    background-size: contain;
+    background-size: auto;
 }
 
 footer {
@@ -131,6 +131,11 @@ a{
 .text-name{
     color: red;
     font-weight: bold;
+}
+
+.price-pizza{
+    transform: rotate(45deg);
+    padding-top: 1.25rem;
 }
 
 .price-wrap {
