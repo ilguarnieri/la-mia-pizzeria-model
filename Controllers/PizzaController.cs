@@ -36,11 +36,13 @@ namespace la_mia_pizzeria_static.Controllers
 
             if(pizzaCurrent == null)
             {
+                ViewData["Title"] = "Error404";
                 Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 return View("Error404");
             }
             else
             {
+                ViewData["Title"] = pizzaCurrent.Name;
                 return View(pizzaCurrent);
             }
 
