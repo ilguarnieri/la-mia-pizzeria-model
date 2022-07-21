@@ -11,12 +11,20 @@
         <div class="navbar-collapse collapse d-sm-inline-flex">
             <ul class="navbar-nav flex-grow-1  justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a id="home" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index" >Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Pizza" asp-action="Menu">Menù</a>
+                    <a id="menu" class="nav-link text-dark" asp-area="" asp-controller="Pizza" asp-action="Menu">Menù</a>
                 </li>
             </ul>
         </div>
-    </div>            
+    </div>
+    
+    <script>
+        const ind = "@ViewData["Title"].ToString().ToLower()";
+        const item = document.getElementById(ind);
+        item.classList.add("active-item");
+    </script>
 </nav>
+
+

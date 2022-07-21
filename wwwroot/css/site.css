@@ -59,6 +59,11 @@ a{
         color: red !important;
     }
 
+.active-item {
+    font-weight: bold;
+    color: red !important;
+}
+
 /*------------------------------- I N D E X ------------------------------*/
 .welcome-wrapper {
     color: white;

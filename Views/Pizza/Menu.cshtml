@@ -16,7 +16,7 @@
 
             <ul>
                 @foreach(Pizza pizza in Model){
-                    <a href="@Url.Action("Details","Pizza", new{id = pizza.Id})">
+                    <a asp-area="" asp-controller="Pizza" asp-action="Details" asp-route-id="@pizza.Id">
 
                         <li class="pizza-wrapper d-flex flex-column align-items-center p-4 position-relative mb-3">
 
